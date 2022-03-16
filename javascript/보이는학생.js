@@ -10,4 +10,4 @@ function solution(num,arr) {
   
   return answer;
 }
-console.log(solution(6,[130,135,148,140,145,150,150,153]));
+console.log(solution(8,[130,135,148,140,145,150,150,153]));
