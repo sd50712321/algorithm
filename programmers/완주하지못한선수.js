@@ -19,7 +19,22 @@
 // }
 
 //best practice
-const solution = (participant,completion)=>participant.find(participant=>!completion[participant]--,completion.map(participant=>completion[participant]=(completion[participant]|0)+1))
-console.log(solution(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"]));
-console.log(solution(["leo", "kiki", "eden"], ["eden", "kiki"]));
+const solution = (participant,completion) => participant.find(
+  (participant)=>{
+    console.log('completion in first',completion)
+    console.log('participant',participant)
+    console.log('completion[participant] in participant find',completion[participant])
+    return !completion[participant]--
+  },
+  completion.map(
+    (participant)=>{
+      console.log('completion',completion)
+      console.log('participant in completion map',participant)
+      console.log('(completion[participant]|0)',(completion[participant]|0))
+      return completion[participant]=(completion[participant]|0)+1
+    }
+  )
+)
+// console.log(solution(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"]));
+// console.log(solution(["leo", "kiki", "eden"], ["eden", "kiki"]));
 console.log(solution(["marina", "josipa", "nikola", "vinko", "filipa"], ["josipa", "filipa", "marina", "nikola"]));
