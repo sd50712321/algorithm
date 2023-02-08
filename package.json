@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ocrad.js": "^0.0.1",
+    "tesseract.js": "^4.0.2"
+  }
+}
