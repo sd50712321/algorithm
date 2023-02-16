@@ -43,8 +43,3 @@ function solution(m, n, board) {
   }
   return answer;
 }
-
-const m = 6;
-const n = 6;
-const board = ["TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"];
-console.log(solution(m, n, board)); // 15
