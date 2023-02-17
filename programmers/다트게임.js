@@ -41,3 +41,45 @@ function solution(dartResult) {
   }
   return answer.reduce((prev, cur) => prev + cur, 0);
 }
+
+//gpt
+// function solution(dartResult) {
+//     let scores = [];
+//     let currentScore = 0;
+
+//     for (let i = 0; i < dartResult.length; i++) {
+//       const char = dartResult[i];
+
+//       if (/\d/.test(char)) { // 숫자일 때
+//         if (char === '1' && dartResult[i + 1] === '0') { // 10일 때
+//           currentScore = 10;
+//           i++;
+//         } else {
+//           currentScore = parseInt(char);
+//         }
+//       } else if (/[SDT]/.test(char)) { // 보너스일 때
+//         if (char === 'S') {
+//           currentScore **= 1;
+//         } else if (char === 'D') {
+//           currentScore **= 2;
+//         } else if (char === 'T') {
+//           currentScore **= 3;
+//         }
+
+//         scores.push(currentScore);
+//         currentScore = 0;
+//       } else if (/[#*]/.test(char)) { // 옵션일 때
+//         if (char === '*') {
+//           scores[scores.length - 1] *= 2;
+
+//           if (scores.length > 1) {
+//             scores[scores.length - 2] *= 2;
+//           }
+//         } else if (char === '#') {
+//           scores[scores.length - 1] *= -1;
+//         }
+//       }
+//     }
+
+//     return scores.reduce((acc, curr) => acc + curr, 0);
+//   }
